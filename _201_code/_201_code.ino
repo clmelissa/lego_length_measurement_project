@@ -27,11 +27,7 @@ void loop() {
 
   if(buttonPressed == HIGH) //pressed
   { 
-   /* NOTE : we're cannot use use motor.step as a condition. I will find a way to move the motor 
-    *        and check the condition at the same time 
-    *        because if I do motor.step(200, FORWARD, MICROSTEP);
-    *        it will wait until the motor stop moving and then go to the next line
-    */
+
     while(num_step < 200)
     {
       motor.step(1, FORWARD, MICROSTEP); // move one step
